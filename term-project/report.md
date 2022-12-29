@@ -120,9 +120,9 @@ The user can use this script with relative or absolute paths of input image:
 ```sh
 chmod +x infer.sh
 
-./infer.sh -i ./cat.jpeg
+./infer.sh -i ./cat.png
 # or
-./infer.sh -i /path/to/cat.jpeg
+./infer.sh -i /path/to/cat.png
 ```
 
 ## Challenges

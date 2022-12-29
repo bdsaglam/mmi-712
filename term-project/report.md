@@ -1,3 +1,4 @@
+# Term Project Report
 ## Dockerfile
 
 Here is the Dockerfile:
@@ -123,3 +124,10 @@ chmod +x infer.sh
 # or
 ./infer.sh -i /path/to/cat.jpeg
 ```
+
+## Challenges
+To be honest, I haven't faced any technical challenges when doing this assignment as I've been using Docker in my professional career for years. The main non-technical challenge was the lack of a GPU to test it. 
+
+The existance of PyTorch Docker image with CUDA made it easier to develop the Dockerfile. Also, `Real-ESRGAN` repository has a nice README which covers installation of the library and usage of inference script. I figured out which binary packages to install in Dockerfile from error messages while debugging the container. 
+
+In `infer.sh`, I needed to get absolute path of input image to be able to attach the directory of input image to the container as a volume. This is required because the script must read input and write output in the shared volume between the host and the container.

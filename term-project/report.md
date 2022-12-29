@@ -59,6 +59,13 @@ ENTRYPOINT ["python", "inference_realesrgan.py"]
 ```
 Finally, the last line sets the entrypoint for the container. We set it as inference script from Real-ESRGAN repo so that the user can run the container with the arguments supported by `inference_realesrgan.py` script.
 
+The Docker image is build with this Dockerfile and `Real-ESRGAN` repository.
+```sh
+# clone Real-ESRGAN repo
+gh repo clone xinntao/Real-ESRGAN
+# Build the image with name `real-esrgan`
+docker build -t real-esrgan .
+```
 ## Script
 
 Here is the `infer.sh` script.
